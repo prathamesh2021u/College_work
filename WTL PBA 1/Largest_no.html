@@ -1,0 +1,54 @@
+<html>
+<head>
+<title></title>
+<style>
+body{
+
+    background-color: bisque;
+  
+}
+
+</style>
+<center>
+<body>
+    
+
+<!-- <h2>the largest number are </h2>
+<form name="enter">
+<P> Show Result<input type="text" name="res"></P>
+
+</form> -->
+
+<script language="javascript">
+    function check(p,q,r){
+   if(p>=q && p>=r)
+   {
+     return p;
+
+   }
+   else if(q>=p && q>=r)
+   {
+    return q;
+   }
+    else{
+  return r;
+    }
+ enter.res.value=check(p,q,r);
+}
+
+ 
+ 
+ var a=prompt("enter the 1st no");
+ var b= prompt("enter the 2nd no");
+ var c=prompt("Enter the 3rd no");
+
+ var x= check(a,b,c);
+
+
+ document.write("the largest Number is:"+x)
+
+</script>
+
+</body>
+</center>
+</head></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h2>Enter the number of rows and columns:</h2>
+    <form>
+        Rows: <input type="number" id="rows" min="1"><br>
+        Columns: <input type="number" id="columns" min="1"><br>
+        <input type="button" value="Generate Table" onclick="generateTable()">
+    </form>
+    <h2>Multiplication Table:</h2>
+    <div id="table"></div>
+
+    <script>
+        function generateTable() {
+            const rowsInput = document.getElementById('rows');
+            const columnsInput = document.getElementById('columns');
+            const tableDiv = document.getElementById('table');
+
+            const rows = parseInt(rowsInput.value);
+            const columns = parseInt(columnsInput.value);
+
+            let tableHTML = '';
+
+            for (let i = 1; i <= rows; i++) {
+                tableHTML += '<p>';
+                for (let j = 1; j <= columns; j++) {
+                    tableHTML += (i * j) + '\t';
+                }
+                tableHTML += '</p>';
+            }
+
+            tableDiv.innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>

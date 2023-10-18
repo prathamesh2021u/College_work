@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Array Example</title>
+</head>
+<body>
+  <h1>Color Array Example</h1>
+
+  <script>
+    // Initial array of colors
+    var colors = ["Red", "Green", "Blue"];
+
+    // Function to handle adding a color
+    function addColor() {
+      var userInput = prompt("Enter a color:");
+      
+      // Check if the input color is not already in the array
+      if (userInput && !colors.includes(userInput)) {
+        // Add the input color to the array
+        colors.push(userInput);
+        document.write("<p>Color added successfully!</p>");
+      } else if (userInput) {
+        document.write("<p>Color already exists in the array.</p>");
+      }
+      
+      // Display the updated array of colors
+      document.write("<p>Updated colors array: " + colors.join(', ') + "</p>");
+    }
+  </script>
+
+  <button onclick="addColor()">Add Color</button>
+</body>
+</html>

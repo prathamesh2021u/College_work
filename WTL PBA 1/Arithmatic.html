@@ -1,0 +1,102 @@
+<html>
+<head>
+<title></title>
+<style>
+    body{
+
+        background-color: rgb(8, 214, 214);
+    }
+    
+</style>
+<center>
+<body>
+    <h2>All fuction </h2>
+    <form name="entry">
+    <p>Enter Number <input type="text" name="t1"></p>
+    <p>Enter Number <input type="text" name="t2"></p>
+
+    <p>Show Result<input type="text" name="res"></p>
+    
+    <p><input type="button" value="Add +" onclick="javascript:sum()"></p>
+    <p><input type="button" value="Sub -" onclick="javascript:sub()"></p>
+    <p><input type="button" value="Mul *" onclick="javascript:mul()"></p>
+    <p><input type="button" value="Div /" onclick="javascript:div()"></p>
+    
+</form>
+<script language="javascript">
+    function sum()
+    {
+        var a,b,c
+        a=parseInt(entry.t1.value)
+        b=parseInt(entry.t2.value)
+        c=a+b
+        entry.res.value=c
+
+    }
+
+    function sub()
+    {
+        var a,b,c
+        a=parseInt(entry.t1.value)
+        b=parseInt(entry.t2.value)
+        c=a-b
+        entry.res.value=c
+
+    }
+ 
+    function mul()
+    {
+        var a,b,c
+        a=parseInt(entry.t1.value)
+        b=parseInt(entry.t2.value)
+        c=a*b
+        entry.res.value=c
+
+    }
+    function div()
+    {
+        var a,b,c
+        a=parseInt(entry.t1.value)
+        b=parseInt(entry.t2.value)
+        c=a/b
+        entry.res.value=c
+
+    }
+
+
+
+
+
+</script>
+    
+
+
+</body>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+</html>

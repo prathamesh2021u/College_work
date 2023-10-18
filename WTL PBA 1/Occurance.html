@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Occurrences</title>
+</head>
+<body>
+    <script>
+        // Create an array
+        var array = ['a', 'b', 'a', 'c', 'z'];
+
+        // Character to count occurrences
+        var charToCount = 'a';
+
+        // Count occurrences of the character
+        var count = 0;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] === charToCount) {
+                count++;
+            }
+        }
+
+        // Display the result in the browser
+        var result = 'Occurrences of ' + charToCount + ' is ' + count;
+        document.body.innerHTML = result;
+    </script>
+</body>
+</html>

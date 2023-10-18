@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  #colorButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<button id="colorButton">Change Color</button>
+<script>
+  const colors = ['#FF5733', '#33FF5E', '#339CFF', '#C433FF', '#FF33A8'];
+  let currentIndex = 0;
+
+  const colorButton = document.getElementById('colorButton');
+
+  colorButton.addEventListener('click', () => {
+    document.body.style.backgroundColor = colors[currentIndex];
+    currentIndex = (currentIndex + 1) % colors.length;
+  });
+</script>
+</body>
+</html>

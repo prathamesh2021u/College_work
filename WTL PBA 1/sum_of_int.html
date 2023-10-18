@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Integers</title>
+</head>
+<body>
+  <script>
+    function calculateSum() {
+      var inputNumber = parseInt(prompt("Enter a number:"));
+
+      if (isNaN(inputNumber)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      var sum = 0;
+      var calculation = "";
+
+      for (var i = 0; i <= inputNumber; i++) {
+        sum += i;
+       calculation += (i === 0) ? "0" : ("+" + i);(i === 0)// is a conditional expression that checks if the value of i is equal to 0.
+
+// The ternary conditional operator ? : is used here. It's a shorthand for an if-else statement. It works like this: (condition) ? (value if true) : (value if false).
+
+// If i is equal to 0, then "0" is added to the calculation string.
+// If i is not equal to 0, then "+" + i is added to the calculation string. This adds a plus sign followed by the value of i to the string.
+      }
+
+      var result = calculation + "=" + sum;
+
+      var resultElement = document.createElement("p");
+      resultElement.textContent = result;
+      document.body.appendChild(resultElement);
+      
+    }
+
+    calculateSum();
+  </script>
+</body>
+</html>

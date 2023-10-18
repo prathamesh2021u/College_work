@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Palindrome Checker</title>
+</head>
+
+<body>
+
+    <script>
+        function isPalindrome(str) {
+            str = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+            for (let i = 0; i < Math.floor(str.length / 2); i++) {
+                if (str[i] !== str[str.length - 1 - i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        const userInput = prompt("Enter a string:");
+
+        if (userInput !== null) {
+            if (isPalindrome(userInput)) {
+                alert(`${userInput} is a palindrome.`);
+            } else {
+                alert(`${userInput} is not a palindrome.`);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

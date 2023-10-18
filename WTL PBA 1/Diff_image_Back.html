@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Changer</title>
+  <style>
+    #imageContainer {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #imageContainer img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="imageContainer">
+    <img id="image" src="" alt="Image">
+  </div>
+  <button id="changeButton">Change Image</button>
+
+  <script>
+    const images = [
+      'img1.jpg',
+      'img2.jpg',
+      'img3.jpg'
+    ];
+
+    const imageElement = document.getElementById('image');
+    const changeButton = document.getElementById('changeButton');
+
+    let currentImageIndex = 0;
+
+    changeButton.addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      const imagePath = images[currentImageIndex];
+      imageElement.src = imagePath;
+    });
+  </script>
+</body>
+</html>

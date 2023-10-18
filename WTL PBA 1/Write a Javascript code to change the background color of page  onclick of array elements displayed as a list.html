@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Background Color Changer</title>
+ <style>
+ body {
+ margin: 0;
+ padding: 0;
+ transition: background-color 0.5s;
+ }
+ ul {
+ list-style-type: none;
+ padding: 0;
+ }
+ li {
+ cursor: pointer;
+ padding: 10px;
+ border: 1px solid #ccc;
+ margin: 5px;
+ }
+ </style>
+</head>
+<body>
+ <ul id="colorList">
+ <li onclick="changeBackgroundColor('white')">White</li>
+ <li onclick="changeBackgroundColor('lightblue')">Light Blue</li>
+ <li onclick="changeBackgroundColor('lightgreen')">Light Green</li>
+ <li onclick="changeBackgroundColor('lightpink')">Light Pink</li>
+ </ul>
+ <script>
+ function changeBackgroundColor(color) {
+ document.body.style.backgroundColor = color;
+ }
+ </script>
+</body>
+</html>

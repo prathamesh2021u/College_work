@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Anchor Tag Appender</title>
+</head>
+<body>
+ <button id="addAnchorBtn">Add Anchor Tag</button>
+ <script>
+ document.addEventListener("DOMContentLoaded", function() {
+ const addAnchorButton = document.getElementById("addAnchorBtn");
+ addAnchorButton.addEventListener("click", function() {
+ const newAnchor = document.createElement("a");
+ newAnchor.textContent = "Click Me!";
+ newAnchor.href = "https://mituniversity.ac.in/"; 
+ newAnchor.target = "_blank"; // Open link in a new tab
+ document.body.appendChild(newAnchor);
+ });
+ });
+ </script>
+</body>
+</html>
